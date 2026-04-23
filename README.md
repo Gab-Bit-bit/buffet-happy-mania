@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 🎉 Happy Mania Buffet Infantil
 
 Site institucional desenvolvido para o buffet infantil Happy Mania, com foco na apresentação visual dos serviços, estrutura do espaço e experiência oferecida aos clientes.
