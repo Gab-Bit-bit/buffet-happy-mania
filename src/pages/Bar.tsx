@@ -1,0 +1,21 @@
+import "./Pages.css";
+export default function Bar() {
+  return (
+    <section className="titulo">
+      <h2>Bar / Bebidas</h2>
+      <div className="subtitulo">
+        <p>Conheça nosso bar!</p>
+      </div>
+      <div className="img-container">
+        <img loading="lazy" src="/images-webp/Bebidas/bebidas5.jpeg" alt="bebidas" />
+        <img loading="lazy" src="/images-webp/Bebidas/bebidas.webp" alt="bebidas" />
+        <img loading="lazy" src="/images-webp/Bebidas/bebidas2.webp" alt="bebidas" />
+        <img loading="lazy" src="/images-webp/Bebidas/bebidas4.jpeg" alt="bebidas" />
+        <img loading="lazy" src="/images-webp/Bebidas/bar.webp" alt="bar" />
+        <img loading="lazy" src="/images-webp/Bebidas/bar3.jpeg" alt="bar" />
+        <img loading="lazy" src="/images-webp/Bebidas/bar4.jpeg" alt="bar" />
+        <img loading="lazy" src="/images-webp/Bebidas/bar2.webp" alt="bar" />
+      </div>
+    </section>
+  );
+}

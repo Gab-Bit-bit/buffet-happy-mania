@@ -1,0 +1,338 @@
+/* Navbar padrão */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+  transition: all 0.3s ease;
+}
+
+/* Quando rola a página */
+.navbar.scrolled {
+  position: fixed;
+  background-color: #5b5959f3; 
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid orange;
+  border-radius: 9999px;
+  padding: 6px 6px;
+  margin: 12px 30px;
+  justify-content: center;
+}
+
+/* Logo */
+.logo {
+  position: relative;
+  z-index: 1200;
+}
+
+.logo figure {
+  display: flex;
+  align-items: center;
+}
+
+.logo figure img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-left: 0px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Logo menor ao scrollar */
+.navbar.scrolled .logo figure img {
+  width: 65px;
+  height: 65px;
+  margin-right: 0px;
+}
+
+/* Container principal da navegação */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Botão hambúrguer (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 999px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Links padrão */
+.nav-links a {
+  position: relative;
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Linha animada ao hover */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #ff9900;
+  transition: transform 0.45s ease;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-links a:hover {
+  color: #ff9900;
+}
+
+/* Estilo dos links quando navbar está fixada */
+.navbar.scrolled .nav-links a {
+  color: #e6e5e5;
+  margin-right: 10px;
+}
+
+.navbar.scrolled .nav-links a::after {
+  background-color: orange;
+}
+
+.navbar.scrolled .nav-links a:hover {
+  color: #ff9900;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+    justify-content: flex-start;
+  }
+
+  .navbar.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo {
+    margin-left: auto;
+  }
+
+  .logo figure img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .navbar.scrolled .logo figure img {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+  }
+
+  .nav-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    bottom: auto;
+    height: calc(50vh - 96px);
+    width: 140px;
+    background: linear-gradient(to bottom, #302f2f, #1c1b1b);
+    padding: 16px 22px 24px;
+    display: none;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    z-index: 1050;
+  }
+
+  .navbar.scrolled .nav-container {
+    left: 30px;
+  }
+
+  .nav-container.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .navbar.scrolled .nav-links {
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+}
+
+/* Notebooks padrão (1366px) */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .navbar {
+    padding: 16px 40px;
+  }
+
+  .navbar.scrolled {
+    margin: 10px 24px;
+  }
+
+  .navbar.navbar.scrolled .logo img{
+    padding-right: 60px;
+  }
+
+  .navbar.scrolled .nav-links a{
+    padding-right: 60px;
+  }
+
+}
+
+/* Desktops grandes (1920px+) */
+@media (min-width: 1440px) {
+  .navbar {
+    padding: 20px 80px;
+  }
+
+  .navbar.scrolled .nav-links {
+    padding-right: 120px;
+  }
+
+  .navbar.scrolled .nav-links a{
+    font-size: 15px;
+  }
+  
+  .navbar.scrolled .logo figure img{
+    width: 100px;
+    padding-right: 0px;
+  }
+}
+
+/* Mobile grande (430px) */
+@media (max-width: 430px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .navbar.scrolled {
+    padding: 10px 12px;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+  }
+
+  /* Logo menor em mobile */
+  .logo figure img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Links um pouco maiores, mas cabendo na largura */
+  .nav-links a {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .navbar.navbar.scrolled .nav-links a {
+    font-size: 14px;
+  }
+
+  /* Quando rolar, centraliza links e permite rolagem horizontal se precisar */
+  .navbar.scrolled .nav-links {
+    justify-content: flex-start;
+    overflow-x: visible;
+    white-space: normal;
+  }
+
+  .navbar.scrolled .nav-links a {
+    margin: 0 8px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile médio (390px) */
+@media (max-width: 390px) {
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .logo figure img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 14px;
+  }
+}
+
+/* Mobile pequeno (360px) */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .nav-links a {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+}
