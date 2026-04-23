@@ -1,11 +1,11 @@
-🎉 Happy Mania Buffet Infantil
+#🎉 Happy Mania Buffet Infantil
 
 Site institucional desenvolvido para o buffet infantil Happy Mania, com foco na apresentação visual dos serviços, estrutura do espaço e experiência oferecida aos clientes.
 
 O projeto foi desenvolvido com uma interface moderna, intuitiva e totalmente responsiva, proporcionando uma navegação fluida em diferentes dispositivos.
 
 
-📌 Sobre o projeto
+#📌 Sobre o projeto
 
 Este site tem como objetivo apresentar de forma visual e organizada tudo o que o buffet oferece, incluindo:
 
@@ -18,7 +18,7 @@ Este site tem como objetivo apresentar de forma visual e organizada tudo o que o
 Trata-se de uma aplicação frontend, desenvolvida para fins de apresentação institucional.
 
 
-🛠️ Tecnologias utilizadas
+#🛠️ Tecnologias utilizadas
 
 - React
 - TypeScript
@@ -26,7 +26,7 @@ Trata-se de uma aplicação frontend, desenvolvida para fins de apresentação i
 - Create React App
 
 
-⚙️ Funcionalidades
+#⚙️ Funcionalidades
 
 - Navegação entre seções do site
 - Interface visual moderna
@@ -38,19 +38,25 @@ Trata-se de uma aplicação frontend, desenvolvida para fins de apresentação i
  - 💻 desktops
 
 
-🚀 Como executar o projeto localmente
+#🚀 Como executar o projeto localmente
 
-# Instalar dependências
+Instalar dependências
 npm install
 
-# Executar o projeto
+Executar o projeto
 npm start
 
 A aplicação será iniciada em:
 
 http://localhost:3000
 
+#🌐 Deploy
 
-📄 Observações
+A aplicação está disponível online em:
+
+👉 https://buffet-happy-mania.pages.dev
+
+
+#📄 Observações
 
 Projeto desenvolvido com foco em prática de desenvolvimento frontend utilizando React e TypeScript, aplicando conceitos de componentização, responsividade e organização visual.
