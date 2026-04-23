@@ -40,10 +40,10 @@ Trata-se de uma aplicação frontend, desenvolvida para fins de apresentação i
 
 # 🚀 Como executar o projeto localmente
 
-Instalar dependências
+### Instalar dependências
 npm install
 
-Executar o projeto
+### Executar o projeto
 npm start
 
 A aplicação será iniciada em:
