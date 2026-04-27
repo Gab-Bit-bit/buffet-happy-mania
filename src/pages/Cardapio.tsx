@@ -17,16 +17,17 @@ export default function Cardapio(){
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio6.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio16.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio17.webp" alt="dadinho" />
-        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio24.jpeg" alt="dadinho" />
+        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio24.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio18.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio21.webp" alt="dadinho" />
-        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio25.jpeg" alt="dadinho" />
-        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio26.jpeg" alt="dadinho" />
+        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio27.webp" alt="dadinho" />
+        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio25.webp" alt="dadinho" />
+        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio26.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio4.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio7.webp" alt="dadinho" />
-        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio8.jpeg" alt="dadinho" />
+        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio8.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio9.webp" alt="dadinho" />
-        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio22.jpeg" alt="dadinho" />
+        <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio22.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio10.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio11.webp" alt="dadinho" />
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio12.webp" alt="dadinho" />

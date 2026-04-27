@@ -30,7 +30,7 @@ const QuemCuida: React.FC = () => {
           </p>
           
           <p>
-            O salão principal, com capacidade para até 200 convidados, foi projetado para 
+            O salão principal, com capacidade para até 150 convidados, foi projetado para 
             oferecer conforto e elegância. Nossa cozinha prepara pratos deliciosos com ingredientes 
             frescos e de qualidade, garantindo uma experiência gastronômica excepcional.
           </p>

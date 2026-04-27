@@ -28,8 +28,8 @@ export default function Ambientes() {
         <img loading="lazy" src="/images-webp/Salão/salao8.webp" alt="salao principal" />
         <img loading="lazy" src="/images-webp/Salão/salao9.webp" alt="salao principal" />
         <img loading="lazy" src="/images-webp/Salão/areaKids.webp" alt="area kids" />
+        <img loading="lazy" src="/images-webp/Salão/areaKids1.webp" alt="area kids" />
         <img loading="lazy" src="/images-webp/Salão/areaKids2.webp" alt="area kids" />
-        <img loading="lazy" src="/images-webp/Salão/areaKids3.webp" alt="area kids" />
         <img loading="lazy" src="/images-webp/Salão/copa2.webp" alt="copa" />
         <img loading="lazy" src="/images-webp/Salão/copa.webp" alt="copa" />
         <img loading="lazy" src="/images-webp/Salão/copa3.webp" alt="copa" />
