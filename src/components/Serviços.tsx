@@ -17,6 +17,10 @@ const Servicos: React.FC = () => {
           <img loading="lazy" src="/images-webp/Salão/salaoCard.webp" alt="salao" />
           <p>Ambientes</p>
         </Link>
+        <Link to="/mesas-tematicas" className="areas-card">
+          <img loading="lazy" src="/images-webp/Mesas Temáticas/Safári Luxo/mesaZoologico.webp" alt="mesas temáticas" />
+          <p>Mesas Temáticas</p>
+        </Link>
         <Link to="/servicos/arcade" className="areas-card">
           <img loading="lazy" src="/images-webp/Arcade/arcade6.webp" alt="arcade" />
           <p>Arcade</p>

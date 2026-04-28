@@ -60,6 +60,10 @@
   justify-content: flex-end;
 }
 
+.menu-overlay {
+  display: none;
+}
+
 /* Links */
 .nav-links {
   display: flex;
@@ -152,7 +156,7 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 16px;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .navbar.scrolled {
@@ -166,10 +170,17 @@
 
   .hamburger {
     display: flex;
+    width: 42px;
+    height: 42px;
+    padding: 10px 8px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(4px);
   }
 
   .logo {
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .logo figure img {
@@ -185,44 +196,90 @@
 
   .nav-container {
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 0;
-    bottom: auto;
-    height: calc(50vh - 96px);
-    width: 140px;
-    background: linear-gradient(to bottom, #302f2f, #1c1b1b);
-    padding: 16px 22px 24px;
-    display: none;
-    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.4);
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    z-index: 1050;
-  }
-
-  .navbar.scrolled .nav-container {
-    left: 30px;
+    height: 100vh;
+    width: min(78vw, 320px);
+    background: linear-gradient(180deg, #2c2b2b 0%, #1a1919 100%);
+    padding: 18px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 10px 0 28px rgba(0, 0, 0, 0.35);
+    z-index: 1150;
+    transform: translateX(-105%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.28s ease, opacity 0.2s ease, visibility 0.2s ease;
   }
 
   .nav-container.open {
-    display: flex;
-    flex-direction: column;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-links {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    gap: 14px;
+    gap: 12px;
   }
 
   .nav-links a {
     margin: 0;
-    font-size: 14px;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid transparent;
+    box-sizing: border-box;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover {
+    color: #fff;
+    border-color: rgba(255, 165, 0, 0.8);
+    background: rgba(255, 165, 0, 0.16);
   }
 
   .navbar.scrolled .nav-links {
     padding-right: 0;
     justify-content: flex-start;
+  }
+
+  .navbar.scrolled .nav-links a {
+    margin: 0;
+    font-size: 15px;
+    color: #fff;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1120;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
+
+  .menu-overlay.open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
@@ -285,26 +342,9 @@
     height: 50px;
   }
 
-  /* Links um pouco maiores, mas cabendo na largura */
-  .nav-links a {
-    margin-left: 0;
-    font-size: 15px;
-  }
-
-  .navbar.navbar.scrolled .nav-links a {
-    font-size: 14px;
-  }
-
-  /* Quando rolar, centraliza links e permite rolagem horizontal se precisar */
-  .navbar.scrolled .nav-links {
-    justify-content: flex-start;
-    overflow-x: visible;
-    white-space: normal;
-  }
-
-  .navbar.scrolled .nav-links a {
-    margin: 0 8px;
-    font-size: 12px;
+  .nav-container {
+    width: min(84vw, 300px);
+    padding-top: 16px;
   }
 }
 
@@ -320,7 +360,6 @@
   }
 
   .nav-links a {
-    margin-left: 0;
     font-size: 14px;
   }
 }
@@ -331,8 +370,7 @@
     padding: 8px 10px;
   }
 
-  .nav-links a {
-    margin-left: 8px;
-    font-size: 14px;
+  .nav-container {
+    width: 88vw;
   }
 }

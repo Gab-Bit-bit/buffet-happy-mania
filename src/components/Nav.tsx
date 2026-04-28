@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Nav.css";
 import {
   useLocation,
+  useNavigate,
   Link,
 } from "react-router-dom";
 
@@ -9,7 +10,31 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
+
+  const handleSectionNavigation = (sectionId?: string) => {
+    setMenuOpen(false);
+
+    if (!sectionId) {
+      if (isHome) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      navigate("/");
+      return;
+    }
+
+    if (isHome) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      return;
+    }
+
+    navigate(`/#${sectionId}`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +44,18 @@ const Navbar: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <header
@@ -46,59 +83,59 @@ const Navbar: React.FC = () => {
             to="/"
             className="links"
             onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }
-              setMenuOpen(false);
+              e.preventDefault();
+              handleSectionNavigation();
             }}
           >
             Home
           </Link>
           <Link
-            to="/#servicos-cards"
+            to="/#sobre"
             className="links"
             onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                const el = document.getElementById("servicos-cards");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }
-              setMenuOpen(false);
+              e.preventDefault();
+              handleSectionNavigation("sobre");
+            }}
+          >
+            Sobre
+          </Link>
+          <Link
+            to="/#servicos"
+            className="links"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSectionNavigation("servicos");
             }}
           >
             Serviços
           </Link>
           <Link
-            to="/mesas-tematicas"
+            to="/#feedbacks"
             className="links"
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              handleSectionNavigation("feedbacks");
+            }}
           >
-            Mesas Temáticas
+            Feedbacks
           </Link>
           <Link
-            to="/servicos/ambientes"
+            to="/#contato"
             className="links"
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              handleSectionNavigation("contato");
+            }}
           >
-            Ambientes
-          </Link>
-          <Link
-            to="/servicos/cardapio"
-            className="links"
-            onClick={() => setMenuOpen(false)}
-          >
-            Cardápio
-          </Link>
-          <Link
-            to="/servicos/arcade"
-            className="links"
-            onClick={() => setMenuOpen(false)}
-          >
-            Arcade
+            Contato
           </Link>
         </nav>
       </div>
+      <button
+        className={`menu-overlay ${menuOpen ? "open" : ""}`}
+        onClick={() => setMenuOpen(false)}
+        aria-label="Fechar menu de navegação"
+      />
     </header>
   );
 };

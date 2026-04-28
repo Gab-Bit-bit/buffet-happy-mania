@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './Home.css';
 import SobreBuffet from '../components/SobreBuffet';
 import Serviços from '../components/Serviços';
+import FeedbacksGoogle from '../components/FeedbacksGoogle';
 
 const backgroundImages = [
   '/images-webp/Salão/upSalao.webp',
@@ -48,13 +50,35 @@ const HomeContent: React.FC = () => {
 
 export default function Home() {
   const areasRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const sectionId = location.hash.replace("#", "");
+    const scrollTimer = window.setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 120);
+
+    return () => window.clearTimeout(scrollTimer);
+  }, [location.hash]);
 
   return (
     <>
       <HomeContent />
-      <SobreBuffet />
-      <div ref={areasRef} id="servicos-cards">
+      <div id="sobre">
+        <SobreBuffet />
+      </div>
+      <div ref={areasRef} id="servicos">
         <Serviços />
+      </div>
+      <div id="feedbacks">
+        <FeedbacksGoogle />
       </div>
     </>
   );
