@@ -1,5 +1,7 @@
 # 🎉 Happy Mania Buffet Infantil
 
+![Preview do site](./printBuffet.png)
+
 Site institucional desenvolvido para o buffet infantil Happy Mania, com foco na apresentação visual dos serviços, estrutura do espaço e experiência oferecida aos clientes.
 
 O projeto foi desenvolvido com uma interface moderna, intuitiva e totalmente responsiva, proporcionando uma navegação fluida em diferentes dispositivos.
