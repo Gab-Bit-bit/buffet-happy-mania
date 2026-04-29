@@ -4,7 +4,7 @@ export default function Bar() {
     <section className="titulo">
       <h2>Bar / Bebidas</h2>
       <div className="subtitulo">
-        <p>Conheça nosso bar!</p>
+        <p>Drinks, batidas, cervejas e bebidas alcoólicas selecionadas para complementar a sua festa com qualidade e sofisticação.</p>
       </div>
       <div className="img-container">
         <img loading="lazy" src="/images-webp/Bebidas/bebidas5.webp" alt="bebidas" />

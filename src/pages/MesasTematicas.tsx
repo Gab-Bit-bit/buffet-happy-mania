@@ -154,7 +154,7 @@ export default function MesasTematicas() {
     <section className="titulo">
       <h2>Mesas Temáticas</h2>
       <div className="subtitulo">
-        <p>Conheça nossas melhores mesas temáticas para a sua festa!</p>
+        <p>Conheça todas nossas mesas temáticas para tornar a sua festa mais especial, com decoração personalizada e visual encantador para aniversários.</p>
       </div>
       <div className="img-container">
         {paginatedMesas.map((mesa) => (

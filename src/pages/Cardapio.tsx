@@ -7,7 +7,7 @@ export default function Cardapio(){
     <section className="titulo">
       <h2>Cardápio</h2>
       <div className="subtitulo">
-        <p>Conheça nossas degustações, salgadinhos, doces e muito mais!</p>
+        <p>Os salgados mais saborosos para festa infantil, com qualidade e muito sabor em cada detalhe.</p>
       </div>
       <div className="img-container">
         <img loading="lazy" src="/images-webp/CardápioBuffet/cardapio.webp" alt="dadinho" />

@@ -5,7 +5,7 @@ export default function Ambientes() {
     <section className="titulo">
       <h2>Ambientes</h2>
       <div className="subtitulo">
-        <p>Conheça nossos Ambientes!</p>
+        <p>Conheça os ambientes do nosso buffet infantil, com estrutura completa para festas inesquecíveis.</p>
       </div>
       <div className="img-container">
         <img loading="lazy" src="/images-webp/entradaBuffet.webp" alt="Entrada" />
