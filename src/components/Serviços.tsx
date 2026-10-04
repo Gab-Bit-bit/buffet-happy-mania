@@ -18,7 +18,7 @@ const Servicos: React.FC = () => {
           <p>Ambientes</p>
         </Link>
         <Link to="/mesas-tematicas" className="areas-card">
-          <img loading="lazy" src="/images-webp/Mesas Temáticas/Safári Luxo/mesaZoologico.webp" alt="mesas temáticas" />
+          <img loading="lazy" src="/images-webp/mesas-tematicas/mesa-38.webp" alt="mesas temáticas" />
           <p>Mesas Temáticas</p>
         </Link>
         <Link to="/servicos/arcade" className="areas-card">
